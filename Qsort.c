@@ -1,6 +1,7 @@
-# Qsort
- Quicksort in C.
- 
+# Labs
+ Labs by Dimonchik0036.
+
+//LABA 3-1-qsort
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdlib.h>
