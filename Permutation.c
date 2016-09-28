@@ -2,7 +2,9 @@
 //by Dimonchik0036
 
 #define _CRT_SECURE_NO_WARNINGS
+
 #define SIZE_ARRAY 11
+
 #include <stdlib.h>
 #include <stdio.h>
 
