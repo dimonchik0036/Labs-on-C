@@ -1,5 +1,6 @@
 //LABA 3-1-qsort
 //by Dimochik0036
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdlib.h>
