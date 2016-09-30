@@ -7,7 +7,10 @@
 #include <stdio.h>
 
 //Сортирует массив
-void sorting(int* a, int first, int last);
+void qSorting(int* a, int first, int last);
+
+//Меняет элементы массива местами
+void swap(int *arr, int i, int j);
 
 int main()
 {
@@ -23,7 +26,7 @@ int main()
 		scanf("%d", &numberArray[i]); //Ввод данных в массив
 
 	//Сортировка
-	sorting(numberArray, 0, n - 1);
+	qSorting(numberArray, 0, n - 1);
 
 	//Вывод массива
 	for (i = 0; i < n; i++)
@@ -34,7 +37,14 @@ int main()
 	return 0;
 }
 
-void sorting(int* arr, int first, int last)
+void swap(int *arr, int i, int j)
+{
+	int keys = arr[i];
+	arr[i] = arr[j];
+	arr[j] = keys;
+}
+
+void qSorting(int* arr, int first, int last)
 {
 	int i = first;
 	int j = last;
@@ -52,9 +62,7 @@ void sorting(int* arr, int first, int last)
 		{
 			if (i < j)
 			{
-				int keys = arr[i];
-				arr[i] = arr[j];
-				arr[j] = keys;
+				swap(arr, i, j);
 			}
 			i++;
 			j--;
@@ -63,9 +71,9 @@ void sorting(int* arr, int first, int last)
 
 	//Вызов сортировки правой части
 	if (i < last)
-		sorting(arr, i, last);
+		qSorting(arr, i, last);
 
 	//Вызов сортировки левой части
 	if (first < j)
-		sorting(arr, first, j);
+		qSorting(arr, first, j);
 }
