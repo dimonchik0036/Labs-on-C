@@ -10,10 +10,10 @@
 void swap(int *arr, int i, int j);
 
 //Начинка сортировки
-void ShiftDown(int *arr, int i, int j);
+void shiftDown(int *arr, int i, int j);
 
 //Пирамидальная сортировка
-void hSorting(int *arr, int arrSize);
+void heapSort(int *arr, int arrSize);
 
 int main()
 {
@@ -29,7 +29,7 @@ int main()
 		scanf("%d", &numberArray[i]); //Ввод данных в массив
 
 	//Сортировка
-	hSorting(numberArray, n);
+	heapSort(numberArray, n);
 
 	//Вывод массива
 	for (i = 0; i < n; i++)
@@ -47,7 +47,7 @@ void swap(int *arr, int i, int j)
 	arr[j] = keys;
 }
 
-void ShiftDown(int *arr, int i, int j)
+void shiftDown(int *arr, int i, int j)
 {
 	int left = 2 * i + 1;
 	int right = left + 1;
@@ -80,19 +80,19 @@ void ShiftDown(int *arr, int i, int j)
 	}
 }
 
-void hSorting(int *arr, int arrSize)
+void heapSort(int *arr, int arrSize)
 {
 	int i;
 	int len = arrSize;
 
 	for (i = len / 2 - 1; i >= 0; i--)
 	{
-		ShiftDown(arr, i, len);
+		shiftDown(arr, i, len);
 	}
 
 	for (i = len - 1; i > 0; i--)
 	{
 		swap(arr, 0, i);
-		ShiftDown(arr, 0, i);
+		shiftDown(arr, 0, i);
 	}
 }
