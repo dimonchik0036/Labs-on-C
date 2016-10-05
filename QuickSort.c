@@ -50,7 +50,6 @@ void quickSort(int* arr, int first, int last)
 	int j = last;
 	int centr = arr[(first + last) / 2]; //Выбор значения для границы сортировки
 	
-
 	do 
 	{
 		while (arr[i] < centr) 
