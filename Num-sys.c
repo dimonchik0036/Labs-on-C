@@ -127,15 +127,6 @@ int main()
 		//Вывод разделительной точки
 		printf( ".");
 
-		//Частный случай, когда исходная СС == требуемой
-		if (b1 == b2)
-		{
-			for (i = sizeInt + 1; i < (sizeInt + sizeReal + 1); i++)
-				printf( "%c", transInLetters(transOfLetters(countArray[i])));
-
-			return 0;
-		};
-
 		int64 b1_maxStep = 1;
 
 		for (int i = 0; i < sizeReal; i++)
