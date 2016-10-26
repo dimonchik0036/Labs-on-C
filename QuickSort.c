@@ -44,6 +44,8 @@ int main()
 	{
 		printf("%d ", numberArray[i]);
 	}
+	
+	free(numberArray);
 
 	return 0;
 }
