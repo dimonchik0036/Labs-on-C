@@ -20,7 +20,7 @@ int main()
 
 	//Массив из n чисел
 	int *numberArray;
-	numberArray = malloc(n * sizeof(*numberArray));
+	numberArray = (int*)malloc(n * sizeof(*numberArray));
 
 	if (numberArray == NULL)
 	{
