@@ -17,16 +17,32 @@ void heapSort(int *arr, int arrSize);
 
 int main()
 {
-	const int sizeArray = 2000000;
 	int n; //Количество чисел в массиве
 
 	scanf("%d", &n);
+	
+	//Массив из n чисел
+	int *numberArray;
+	numberArray = (int*)malloc(n * sizeof(*numberArray));
 
-	static int numberArray[sizeArray]; //Массив исходных чисел
+	if (numberArray == NULL)
+	{
+		printf("not memory");
+
+		return 0;
+	}
+
 	int i; //Переменная для цикла
 
 	for (i = 0; i < n; i++)
+	{
 		scanf("%d", &numberArray[i]); //Ввод данных в массив
+	}
+
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &numberArray[i]); //Ввод данных в массив
+	}
 
 	//Сортировка
 	heapSort(numberArray, n);
