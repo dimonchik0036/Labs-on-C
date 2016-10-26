@@ -14,16 +14,27 @@ void swap(int *arr, int i, int j);
 
 int main()
 {
-	const int sizeArray = 2000000;
 	int n; //Количество чисел в массиве
 
 	scanf("%d", &n);
 
-	static int numberArray[sizeArray]; //Массив чисел
+	//Массив из n чисел
+	int *numberArray;
+	numberArray = malloc(n * sizeof(*numberArray));
+
+	if (numberArray == NULL)
+	{
+		printf("not memory");
+
+		return 0;
+	}
+	
 	int i; //Переменная для цикла
 
 	for ( i = 0; i < n; i++)
+	{
 		scanf("%d", &numberArray[i]); //Ввод данных в массив
+	}
 
 	//Сортировка
 	quickSort(numberArray, 0, n - 1);
