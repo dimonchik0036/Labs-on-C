@@ -11,7 +11,7 @@
 #include <locale.h>
 #include <math.h>
 
-int search(unsigned char *arr, unsigned char *pattern, int index, int patternSize);
+void search(unsigned char *arr, unsigned char *pattern, int index, int patternSize);
 
 int main()
 {
@@ -63,7 +63,7 @@ int main()
 	return 0;
 }
 
-int search(unsigned char *arr, unsigned char *pattern, int index, int patternSize)
+void search(unsigned char *arr, unsigned char *pattern, int index, int patternSize)
 {
 	int count = patternSize - 1;
 
@@ -77,6 +77,4 @@ int search(unsigned char *arr, unsigned char *pattern, int index, int patternSiz
 	{
 		printf("%d ", index - count + 1);
 	}
-
-	return 0;
 }
