@@ -43,7 +43,6 @@ int main()
 		search(text, pattern, patternSize - 1, patternSize);
 
 	int index = patternSize;
-
 	int iPow3 = (int)pow(CONST, patternSize - 1);
 
 	while ((c = getchar()) != EOF)
