@@ -1,5 +1,5 @@
-//LABA 3-0-heap
-//by Dimonchik0036
+// LABA 3-0-heap
+// by Dimonchik0036
 
 #define _CRT_SECURE_NO_WARNINGS
 
