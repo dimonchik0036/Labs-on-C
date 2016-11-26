@@ -1,4 +1,3 @@
-// LABA 1-0-boyer-moore
 // by Dimonchik0036
 
 #define _CRT_SECURE_NO_WARNINGS
