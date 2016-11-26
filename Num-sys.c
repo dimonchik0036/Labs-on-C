@@ -1,5 +1,5 @@
-//LABA 0-num-sys
-//by Dimonchik0036
+// LABA 0-num-sys
+// by Dimonchik0036
 
 #define _CRT_SECURE_NO_WARNINGS
 
