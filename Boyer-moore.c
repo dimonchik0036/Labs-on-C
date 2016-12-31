@@ -10,7 +10,7 @@
 #define SHABLON_SIZE 20
 #define MAX_CHAR 256
 
-//Производит сравнение шаблона с текстом, при совпадении
+/* Производит сравнение шаблона с текстом, при совпадении */
 void search(char *text, char *shablon, int digit, int index);
 
 int main()
@@ -28,8 +28,7 @@ int main()
 	int shift = 0;
 	int textSize = fread(text, sizeof(char), TEXT_SIZE, stdin);
 
-	//Создание массива стоп-символов
-	//============================================
+	/* Создание массива стоп-символов */
 	unsigned char skip[MAX_CHAR];
 
 	for (int i = 0; i < MAX_CHAR; ++i)
@@ -37,10 +36,12 @@ int main()
 
 	for (int i = 0; i < sizeShablon - 1; ++i)
 		skip[shablon[i]] = sizeShablon - i - 1;
-	//============================================
+
 
 	unsigned char lastCharInShablon, charInText;
-	int index; //Текущая позиция в блоке
+
+	/* Текущая позиция в блоке */
+	int index; 
 
 	lastCharInShablon = shablon[sizeShablon - 1];
 	index = 0;
